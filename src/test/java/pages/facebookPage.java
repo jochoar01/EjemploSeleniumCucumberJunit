@@ -37,16 +37,27 @@ public class facebookPage extends BaseSelenium {
 
     }
 
-    public void validar_letrero_y_cerrar() throws InterruptedException {
+    public void validar_letrero_y_cerrar(String texto) throws InterruptedException {
 
 
         click(BOTON_REGISTRAR);
-        assertEquals(getText(LETRERO), "S2ign Up");
+        assertEquals(getText(LETRERO), texto);
 
 
 
 
     }
+
+    /*public void validar_letrero_y_cerrar() throws InterruptedException {
+
+
+        click(BOTON_REGISTRAR);
+        assertEquals(getText(LETRERO), "Sign Up");
+
+
+
+
+    }*/
 
 
 }

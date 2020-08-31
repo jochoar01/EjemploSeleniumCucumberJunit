@@ -16,6 +16,7 @@ public class FacebookTest {
         page = new facebookPage(driver);
         driver= page.conexionConChrome();
         page.visit("http://www.facebook.com");
+        driver.manage().window().maximize();
     }
 
     @When("^se hace el registro en facebook$")
@@ -23,10 +24,16 @@ public class FacebookTest {
         page.ir_a_pagina_de_registro();
     }
 
-    @Then("^y se valida letrero$")
+    @Then("^y se valida letrero \"([^\"]*)\"$")
+    public void y_se_valida_letrero(String texto) throws Throwable {
+        page.validar_letrero_y_cerrar(texto);
+        page.close();
+    }
+
+    /*@Then("^y se valida letrero \"([^\"]*)\"$")
     public void y_se_valida_letrero() throws Throwable {
         page.validar_letrero_y_cerrar();
         driver.quit();
-    }
+    }*/
 
 }

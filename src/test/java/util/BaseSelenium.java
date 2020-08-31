@@ -75,5 +75,10 @@ public class BaseSelenium {
         driver.get(url);
     }
 
+    public void close() {
+
+        driver.quit();
+    }
+
 
 }
