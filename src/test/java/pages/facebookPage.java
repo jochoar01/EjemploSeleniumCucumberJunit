@@ -25,10 +25,10 @@ public class facebookPage extends BaseSelenium {
 
         click(BOTON_CREAR_CUENTA);
         Thread.sleep(3000);
-        type(INPUT_NOMBRE, "Juan");
-        type(INPUT_APELLIDO, "OCHOA");
-        type(INPUT_MAIL, "juan.ochoa@ceiba.com.co");
-        type(CONTRASENA, "CONTRASENA");
+        type(INPUT_NOMBRE,"Juan");
+        type(INPUT_APELLIDO,"Ochoa");
+        type(INPUT_MAIL, "juan.ochoa@ceiba.com");
+        type(CONTRASENA,"123456");
         click(BOTON_REGISTRAR);
 
 
@@ -40,7 +40,7 @@ public class facebookPage extends BaseSelenium {
     public void validar_letrero_y_cerrar(String texto) throws InterruptedException {
 
 
-        click(BOTON_REGISTRAR);
+
         assertEquals(getText(LETRERO), texto);
 
 
@@ -48,16 +48,6 @@ public class facebookPage extends BaseSelenium {
 
     }
 
-    /*public void validar_letrero_y_cerrar() throws InterruptedException {
-
-
-        click(BOTON_REGISTRAR);
-        assertEquals(getText(LETRERO), "Sign Up");
-
-
-
-
-    }*/
 
 
 }

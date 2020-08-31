@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 
 
 @CucumberOptions(
-/*Ruta donde estan los features*/  features = "src/test/java/features/Prueba.feature",
+/*Ruta donde estan los features*/  features = "src/test/java/features/PruebaApi.feature",
 /*Donde se implementan los escenarios de prueba*/  glue={"seleniumgluecode"},
 plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:resources/cucumber-reports/report.html"}
 )
-public class NuevoRunner {
+public class ApisTestRunner {
 }

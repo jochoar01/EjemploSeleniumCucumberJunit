@@ -18,20 +18,21 @@ public class PruebaApis {
         .header("accept","application/json")
         .asJson();
 
-        //System.out.println("Status------------"+jsonResponse.getStatus());
-        //System.out.println("Json Body------------"+jsonResponse.getBody());
-        //System.out.println("Status Text------------"+jsonResponse.getStatusText());
+        System.out.println("Status------------"+jsonResponse.getStatus());
+        System.out.println("Json Body------------"+jsonResponse.getBody());
+        System.out.println("Status Text------------"+jsonResponse.getStatusText());
+        //System.out.println("Status Text------------"+jsonResponse.);
          Gson gson = new Gson();
          Gson gsonSearch = new Gson();
 
          PeliculasObject peliculasObject = gson.fromJson(String.valueOf(jsonResponse.getBody()),PeliculasObject.class);
-        PeliculasSearch peliculasSearch = gsonSearch.fromJson(String.valueOf(peliculasObject.Search.get(9)),PeliculasSearch.class);
+        //PeliculasSearch peliculasSearch = gsonSearch.fromJson(String.valueOf(peliculasObject.Search.get(9)),PeliculasSearch.class);
          //System.out.println(peliculasObject.Search.get(0).toString());
-        System.out.println(peliculasObject.Search.get(9));
+        //System.out.println(peliculasObject.Search.get(9));
 
 
        // Assert.assertNotNull(jsonResponse);
-        Assert.assertEquals("63",peliculasObject.getTotalResults());
+        Assert.assertEquals("True",peliculasObject.getResponse());
     }
 
 

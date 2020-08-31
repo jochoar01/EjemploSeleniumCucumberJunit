@@ -12,5 +12,7 @@ Feature: Validacion Facebook
     |Letrero|
     |Sign Up|
     |Sign Up|
+    |Sign2 Up|
+
 
 
